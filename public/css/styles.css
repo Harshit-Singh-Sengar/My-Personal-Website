@@ -1,0 +1,1153 @@
+:root{
+
+    --dark-blue: rgb(100, 153, 233);
+      --d1:rgb(158, 221, 255);
+      --d2:rgb(166, 246, 255);
+      --d3:rgb(190, 255, 247);
+  
+      --ff: 'Varela Round', sans-serif;
+  }
+  
+  
+      /*
+        1. Use a more-intuitive box-sizing model.
+      */
+      *, *::before, *::after {
+          box-sizing: border-box;
+        }
+        /*
+          2. Remove default margin
+        */
+        * {
+          margin: 0;
+        }
+        /*
+          Typographic tweaks!
+          3. Add accessible line-height
+          4. Improve text rendering
+        */
+        body {
+          line-height: 1.4;
+          -webkit-font-smoothing: antialiased;
+        }
+        /*
+          5. Improve media defaults
+        */
+        html,
+        body {
+          height: 100%;
+        }
+        h1,
+      h2,
+      h3 {
+        line-height: 1;
+      }
+      
+      
+        img, picture, video, canvas, svg {
+          display: block;
+          max-width: 100%;
+        }
+        /*
+          6. Remove built-in form typography styles
+        */
+        input, button, textarea, select {
+          font: inherit;
+        }
+        /*
+          7. Avoid text overflows
+        */
+        p, h1, h2, h3, h4, h5, h6 {
+          overflow-wrap: break-word;
+        }
+      
+  
+  body{
+      /* background-color: rgb(219, 211, 196); */
+  background-image: url("https://www.transparenttextures.com/patterns/gplay.png");
+  font-family: var(--ff);
+  color: rgb(114, 130, 130,0.01);
+  display: flex;
+  flex-direction: column;
+  }
+  
+  .svgs{
+    background-color: #fff;
+   
+  }
+  
+  
+  /* nav bar */
+  
+  .navbar{
+   
+    display: flex;
+    padding: 0.5rem;
+    margin: 0 2rem ;
+    border: solid 4px rgb(245, 246, 247);
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  }
+
+  
+  
+  .logo{
+    width: 3rem;
+    background-color: #0098c2;
+    color: #0098c2;
+   
+  }
+  
+  .first{
+    display: flex;
+    gap: 2rem;
+  margin-left: 25rem;
+  margin-top: 1rem;
+  }
+  
+  .list-item{
+  list-style: none;
+  
+  
+  }
+  
+  .color-change{
+    color: #111;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+  
+  
+  .openbtn{
+    display: none;
+  }
+  .closebtn{
+    display: none;
+  }
+  ul{
+    display: none;
+  }
+  
+  
+  /* navbar - openside bar*/
+  
+  @media screen and (max-width: 750px) {
+  .sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidebar a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 200px;
+    font-size: 36px;
+    margin-left: 50px;
+  
+  }
+  
+  .openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+  }
+  
+  .openbtn:hover {
+    background-color: #444;
+  }
+  
+  #main {
+    transition: margin-left .5s;
+    padding: 0.5rem;
+  }
+  
+  .side-list{
+    list-style: none;
+  }
+  
+  .openbtn{
+    display: block;
+  }
+  .closebtn{
+    display: block;
+  }
+  ul{
+    display: block;
+  }
+  
+  }
+  
+  @media screen and (max-width : 750px){
+    .first{
+      display: none;
+    }
+  }
+  
+  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+  @media screen and (max-height: 450px) {
+    .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 18px;}
+   
+    
+  }
+  
+  
+  /* nav-bar is done */
+  
+  .container-ms{
+    display: grid;
+    gap: 1rem;
+    padding: 1rem;
+    padding-bottom: 0;
+    
+    }
+    /* tittle */
+    
+    .title{
+      display: grid;
+      place-content: center;
+      padding-top: 1rem;
+    }
+    .heading{
+     
+      font-size: 1.75rem;
+      padding-left:1rem ;
+      padding-right:1.3rem ;
+      color: rgb(99, 112, 126);
+    }
+  
+    .title-side{
+      display: flex;
+      font-size: 1.75rem;
+      padding: 0;
+      color: rgb(99, 112, 126);
+      margin-bottom: 1rem;
+     
+      
+    }
+  
+  /* transtion images */
+  
+.display-wrapper{
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+
+}
+
+.d-row{
+  display: flex;
+  gap: 1rem;
+}
+
+
+
+  .image {
+    display: flex;
+    
+    width: 320px;
+    height: 200px;
+    /* background-color: red; */
+    position: relative;
+    animation-name: example;
+    animation-duration: 4s;
+    background-image: url(../imgaes/14.png);
+    background-repeat: no-repeat;
+    background-position-x: -34px;
+    animation-iteration-count: 1;
+
+
+  }
+
+  
+  @keyframes example {
+    0%  { left:0px; top:0px;}
+    25%   { left:600px; top:0px;}
+    100% {left: 0px; top: 0px;}
+    
+  }
+
+  .image2 {
+    display: flex;
+    
+    width: 320px;
+    height: 200px;
+    /* background-color: red; */
+    position: relative;
+    animation-name: examples;
+    animation-duration: 4s;
+    background-image: url(../imgaes/13.png);
+    background-repeat: no-repeat;
+   background-position-x: -30px;
+   animation-iteration-count: 1;
+   
+
+  }
+  
+  @keyframes examples {
+    0%   { right:0px; top:0px;}
+    25% { right:600px; top:0px;}
+    100% {right: 0px; top: 0px; }
+  }
+
+.kk{
+  width: 430px;
+  height: 210px;
+  background-image: url(../imgaes/16.png);
+  
+}
+
+.side-heading{
+  
+  display: flex;
+  flex-direction: column;
+  width: 430px;
+}
+
+
+.side-heading{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.side-heading h1{
+  padding-left:1rem;
+  padding-right: 1rem;
+  padding-top: 1rem;
+  color: rgb(66, 63, 63);
+  font-weight: 500;
+
+}
+
+.color-change-port{
+  color: #f1f1f1;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.side-heading .btn-primary{
+  border-radius: 10px;
+  background: rgb(41, 173, 165);
+  background: linear-gradient(90deg, rgba(27,164,156,0.974562324929972) 0%, rgba(6,188,155,1) 56%);
+  display: flex;
+ justify-content: start;
+  align-items: center;
+  width: 85%;
+  font-family: "Varela Round", sans-serif ;
+  margin-left: 95px;
+  }
+
+ fa{
+  display: block;
+  position: relative;
+  width: 90%;
+ 
+  
+}
+  .btn-primary .fa-align-right{
+    position: absolute; 
+   right: -10px;
+   width: 5px;
+    
+
+  }
+
+  .btn-primary:hover .fa-align-right{
+  color: #111;
+  }
+
+
+
+.side-heading .btn-primary:hover  {
+  background: rgb(27,164,156);
+  background: linear-gradient(90deg, rgba(27,164,156,1) 0%, rgba(24,182,133,0.947391456582633) 63%);
+}
+
+.side-heading h3{
+  color: rgb(27,164,156);
+}
+
+.side-heading p{
+  color: #444;
+}
+
+
+
+
+
+
+/* ..................... */
+
+  .btn-primary {
+    background-color: #06BC9B;
+    font-size: 18px;
+    padding: 15px 20px;
+    border: 0 none;
+    line-height: 20px;
+    text-align: left;
+    color: #fff!important;
+  }
+  
+  /* cards */
+  
+  .cards{
+    display: flex;
+    
+    /* grid-template-columns: 1fr 1fr 1fr;
+    place-content: center; */
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: 4rem;
+   
+   padding: 1rem;
+  
+  
+  
+  }
+  
+  .card1{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  background-color: #f1f1f1;
+  gap: 1rem;
+  padding: 1rem;
+  max-width: 350px;
+  }
+  
+  .card1 img{
+    border-radius: 50%;
+    max-width: 165px;
+  }
+  
+   .fa{
+      display: block;
+      position: relative;
+      width: 90%;
+     
+      
+    }
+  
+  .card1 .btn-primary{
+    border-radius: 10px;
+    background: rgb(41, 173, 165);
+    background: linear-gradient(90deg, rgba(27,164,156,0.974562324929972) 0%, rgba(6,188,155,1) 56%);
+    display: flex;
+   justify-content: start;
+    align-items: center;
+    width: 85%;
+    font-family: "Varela Round", sans-serif ;
+    margin-left: 95px;
+    }
+  
+   
+  
+  
+    .btn-primary .fa-align-right{
+      position: absolute; 
+     right: -10px;
+     width: 5px;
+      
+  
+    }
+  
+    .btn-primary:hover .fa-align-right{
+    color: #111;
+    }
+  
+  
+  
+  .card1 .btn-primary:hover  {
+    background: rgb(27,164,156);
+    background: linear-gradient(90deg, rgba(27,164,156,1) 0%, rgba(24,182,133,0.947391456582633) 63%);
+  }
+  
+  .card1 h3{
+    color: rgb(27,164,156);
+  }
+  
+  .card1 p{
+    color: #444;
+  }
+  
+  
+  /* footer */
+  
+  footer{
+    background-color: rgb(51, 72, 95);
+   
+    margin-top: auto;
+  }
+
+  .wrap{
+    background-color:  rgb(41, 59, 80);
+    margin-right: 4rem;
+    margin-left: 4rem;
+  }
+  
+  .footer-wall{
+    padding: 0.5rem;
+    
+  }
+  
+  .wrap_social_account{
+  display: flex;
+  flex-direction: row; 
+  justify-content: center;
+  padding: 1rem; 
+  /* background-color: red; */
+  }
+  
+  .list-inline{
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  /* social media icons */
+  .wrap_social_account .fa {
+    padding: 15px;
+    font-size: 20px;
+    width: 50%;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+  } 
+  
+  .fa:hover {
+      opacity: 0.7;
+  }
+  
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+  
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
+  }
+  
+  
+  .fa-linkedin {
+    background: #007bb5;
+    color: white;
+  }
+  
+  .fa-youtube {
+    background: #bb0000;
+    color: white;
+  }
+  
+  .fa-instagram {
+    background: #125688;
+    color: white;
+  }
+  
+  .fa-pinterest {
+    background: rgb(230, 0, 35);
+    color: white;
+  }
+  
+  
+  
+  .fa-snapchat-ghost {
+    background: #fffc00;
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  }
+  
+  
+  .fa-reddit {
+    background: #ff5700;
+    color: white;
+  }
+  
+  .fa-rss {
+    background: #ff6600;
+    color: white;
+  }
+  
+  .footer-content{
+    display: flex;
+    justify-content: center;
+  }
+  
+  
+  
+  .second{
+    color: white;
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    justify-content: center;
+  }
+  
+  .second-list{
+    color: white;
+    text-decoration: none;
+    
+  }
+  
+  .second-menu{
+    text-decoration: none;
+    color: white;
+    padding: 0.5rem;
+  }
+  
+
+
+  
+ /*..............................About Page...........................  */
+
+ .about-wrappers{
+  font-family: "Varela Round", sans-serif ;
+  color: #444;
+  margin-left: 4rem;
+  margin-right: 4rem;
+  margin-top: 1rem;
+  
+ 
+ }
+
+ .about-title{
+  text-align: center;
+  padding: 1rem;
+ }
+
+ .info{
+  display: flex;
+  flex-direction: column;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+ 
+ }
+
+ .para-first{
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+
+ }
+.para-imgs{
+  width: 500px;
+  height: 150px;
+  background-image: url(../imgaes/21.jpg);
+  background-repeat: no-repeat;
+}
+
+
+  
+
+
+ /* ..........................Services Page.................................... */
+
+ /* cards */
+  
+ .cards-S{
+  display: flex;
+  
+  /* grid-template-columns: 1fr 1fr 1fr;
+  place-content: center; */
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 2rem;
+ 
+ padding: 1rem;
+flex-wrap: wrap;
+
+
+}
+
+.card1-S{
+display: flex;
+flex-direction: column;
+text-align: center;
+align-items: center;
+background-color: #f1f1f1;
+gap: 1rem;
+padding: 1rem;
+max-width: 350px;
+
+}
+
+.card1-S img{
+  border-radius: 50%;
+  max-width: 165px;
+}
+
+ .fa{
+    display: block;
+    position: relative;
+    width: 90%;
+   
+    
+  }
+
+.card1-S .btn-primary{
+  border-radius: 10px;
+  background: rgb(41, 173, 165);
+  background: linear-gradient(90deg, rgba(27,164,156,0.974562324929972) 0%, rgba(6,188,155,1) 56%);
+  display: flex;
+ justify-content: start;
+  align-items: center;
+  width: 85%;
+  font-family: "Varela Round", sans-serif ;
+  margin-left: 95px;
+  }
+
+ 
+
+
+  .btn-primary .fa-align-right{
+    position: absolute; 
+   right: -10px;
+   width: 5px;
+    
+
+  }
+
+  .btn-primary:hover .fa-align-right{
+  color: #111;
+  }
+
+
+
+.card1-S .btn-primary:hover  {
+  background: rgb(27,164,156);
+  background: linear-gradient(90deg, rgba(27,164,156,1) 0%, rgba(24,182,133,0.947391456582633) 63%);
+}
+
+.card1-S h3{
+  color: rgb(27,164,156);
+}
+
+.card1-S p{
+  color: #444;
+}
+
+
+
+/* ..........................Contact Page........................................ */
+
+.contact-Wrapper{
+  margin-left: 4rem;
+  margin-right: 4rem;
+
+}
+
+.contct-info{
+  display: flex;
+  
+}
+
+.left-contact{
+  display: flex;
+  gap: 2rem;
+}
+
+/* heading */
+
+.contact-heading{
+margin-top: 1rem;
+
+display: flex;
+flex-direction: column;
+
+
+}
+
+.contact-title{
+  text-align: center;
+  color:white;
+  background-color:  rgb(27,164,156);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-size: 1.3rem;
+
+}
+
+/* form */
+
+form{
+display: flex;
+flex-direction: column;
+background-color: #0098c2;
+padding-left: 2rem;
+padding-right: 2rem;
+margin-bottom: 1rem;
+
+color: #444;
+gap: 1rem;
+background-color: #f1f1f1;
+padding-top: 1rem;
+padding-bottom: 1rem;
+
+}
+
+form input{
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  outline: none;
+  border: solid rgb(211, 209, 209) 1px;
+  border-radius: 5px;
+  padding-left: 0.5rem;
+
+}
+
+form input:hover{
+  filter: drop-shadow(0px 0px 10px rgb(188, 185, 185));
+}
+
+form textarea{
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  outline: none;
+  border: solid rgb(211, 209, 209) 1px;
+  border-radius: 5px;
+  padding-left: 0.5rem;
+
+}
+
+
+form textarea:hover{
+  filter: drop-shadow(0px 0px 10px rgb(188, 185, 185));
+}
+
+.privacy-checkbox{
+  display: flex;
+  gap: 1rem;
+}
+
+
+#submit{
+  text-align: center;
+  letter-spacing: 2px;
+  width: 300px;
+}
+
+#submit:hover{
+  background: rgb(27,164,156);
+  background: linear-gradient(90deg, rgba(27,164,156,1) 0%, rgba(24,182,133,0.947391456582633) 63%);
+
+}
+
+/* cards */
+
+.cards-C{
+  display: flex;
+  flex-direction: column;
+  
+  /* grid-template-columns: 1fr 1fr 1fr;
+  place-content: center; */
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 4rem;
+ 
+ padding-left: 1rem;
+ padding-right: 1rem;
+ padding-bottom: 1rem;
+ 
+ 
+ width: 800px;
+
+}
+
+.card1-C{
+display: flex;
+flex-direction: column;
+text-align: center;
+align-items: center;
+background-color: #f1f1f1;
+gap: 1rem;
+padding: 1rem;
+max-width: 350px;
+
+}
+
+.card1-Cs{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: #f1f1f1;
+  max-width: 350px;
+  
+  }
+
+  .card1-Cs div{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    padding-top: 3.2rem;
+   
+  }
+
+  .card1-Cs h3{
+    color: rgb(27,164,156);
+    /* margin-bottom: 2rem; */
+  }
+  
+  .card1-Cs p{
+    color: #444;
+  }
+  
+
+ .change-contact{
+  width: 100%;
+ 
+
+ }
+
+.ok{
+  border-radius: 50%;
+  max-width: 165px;
+}
+
+ .fa{
+    display: block;
+    position: relative;
+    width: 90%;
+   
+    
+  }
+
+.card1-C .btn-primary{
+  border-radius: 10px;
+  background: rgb(41, 173, 165);
+  background: linear-gradient(90deg, rgba(27,164,156,0.974562324929972) 0%, rgba(6,188,155,1) 56%);
+  display: flex;
+ justify-content: start;
+  align-items: center;
+  width: 85%;
+  font-family: "Varela Round", sans-serif ;
+  margin-left: 95px;
+  color: rgb(82, 93, 104);
+  }
+
+  .btn-primary .fa-align-right{
+    position: absolute; 
+   right: -10px;
+   width: 5px;
+    
+
+  }
+
+  .btn-primary:hover .fa-align-right{
+  color: #111;
+  }
+
+.card1-C .btn-primary:hover  {
+  background: rgb(27,164,156);
+  background: linear-gradient(90deg, rgba(27,164,156,1) 0%, rgba(24,182,133,0.947391456582633) 63%);
+}
+
+.card1-C h3{
+  color: rgb(27,164,156);
+}
+
+.card1-C p{
+  color: #444;
+}
+
+
+/* .......................sub ervices template............................ */
+
+.wrapper-ser{
+  display: flex;
+  flex-direction: row;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  gap: 2rem;
+
+}
+
+
+
+.desp-ser{
+
+  display: flex;
+  flex-direction: column;
+  
+  gap: 1rem;
+ padding: 1rem;
+ width: 70%;
+ background-color: #f1f1f1;
+ margin-top: 1rem;
+ height: fit-content;
+ 
+
+}
+
+.title-desp{
+  color: #06BC9B;
+  font-size: 1.35rem;
+}
+.title-desps{
+  
+    color: #06BC9B;
+  padding-top: 1rem;
+  font-size: 1.35rem; 
+}
+
+.desp-ser p{
+  color: rgb(82, 93, 104);
+}
+
+.small-des{
+  width: 50px;
+}
+
+.selection-scr{
+  margin: 0px;
+  padding: 0px;
+}
+
+.selection-menu{
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 1rem;
+  background-color: #f1f1f1;
+  width: 360px;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  
+
+}
+
+.seletion-items{
+  display: flex;
+  gap: 1rem;
+  align-content: center;
+  align-items: center;
+  padding-right: 3rem;
+  padding-left: 4rem;
+
+}
+
+
+
+.selection-menu .fa{
+  display: block;
+  position: relative;
+  
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  color: rgb(82, 93, 104);
+  font-size: 1rem;
+  
+}
+
+.selection-menu div{
+  padding: 0px;
+  margin: 0px;
+}
+
+.selection-menu .title-desp{
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.selection-menu hr{
+  border: solid black 1px;
+  padding: 0px;
+}
+
+ .selection-menu .fa-chevron-circle-right{
+  color: rgb(27,164,156);
+
+ }
+  
+ .selection-menu .fa .color-change-port{
+  color: #06BC9B;
+ text-decoration: none;
+ font-size: 1rem;
+ display: flex;
+ width: 75%;
+ 
+ }
+
+
+.color-change-port:hover{
+  color: rgb(27,164,156);
+  color: linear-gradient(90deg, rgba(27,164,156,1) 0%, rgba(24,182,133,0.947391456582633) 63%);
+}
+
+.wrapper-icons{
+  background-color: #f1f1f1;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.row-icon{
+  text-align: center;
+
+}
+
+.row-icon .fa-twitter {
+  background: #55ACEE;
+  color: white;
+  width: 2rem;
+  height: 2rem;
+}
+
+
+.row-icon .fa-linkedin {
+  background: #007bb5;
+  color: white;
+  width: 2rem;
+  height: 2rem;
+}
+
+.row-icon .fa-instagram {
+  background: #125688;
+  color: white;
+  width: 2rem;
+  height: 2rem;
+}
+
+.row-icon .fa-pinterest {
+  background: rgb(230, 0, 35);
+  color: white;
+  width: 2rem;
+  height: 2rem;
+}
