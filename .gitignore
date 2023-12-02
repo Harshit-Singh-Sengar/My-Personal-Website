@@ -5,6 +5,7 @@ test.html
 sub-web.html
 mains.html
 contact.html
+*.html
 
 # Logs
 logs
